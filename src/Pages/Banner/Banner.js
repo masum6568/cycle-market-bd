@@ -17,7 +17,7 @@ const Banner = () => {
 
             <img src={banner} style={{ width: '100%' }} alt="" />
 
-            <h2>Welcome to our shop</h2>
+
         </Box >
     );
 };

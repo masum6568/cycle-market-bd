@@ -42,11 +42,11 @@ const useFireBase = () => {
                 const newUser = { email, displayName: name }
                 setUser(newUser);
                 //send name to firebase after creation
-                updateProfile(auth.currentUser, {
-                    displayName: name
-                }).then(() => {
-                }).catch((error) => {
-                });
+                // updateProfile(auth.currentUser, {
+                //     displayName: name
+                // }).then(() => {
+                // }).catch((error) => {
+                // });
                 setAuthError('');
                 navigate('/')
             })

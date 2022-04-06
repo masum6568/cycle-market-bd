@@ -17,6 +17,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button, Grid } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import Deliveryitem from '../Deliveryitem';
 
 const drawerWidth = 200;
 
@@ -132,6 +133,7 @@ function Dashboard(props) {
                             <img style={{ width: '50%' }} src="https://images.unsplash.com/photo-1553105659-d918b253f0f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmljeWNsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
                         </Grid>
                         <Grid item xs={12} sm={7}>
+                            <Deliveryitem></Deliveryitem>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quia architecto labore voluptates. Asperiores, numquam repellendus aliquid soluta amet laudantium?</p>
                         </Grid>
 
