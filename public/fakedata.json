@@ -3,13 +3,15 @@
         "_id": "624c8cc8a7dece8b10d22da4",
         "picture": "https://5.imimg.com/data5/XL/OT/TQ/SELLER-45339558/5f0d418b-e317-4058-a30c-f9618781ab83-500x500.JPG",
         "balance": "$2,399.57",
-        "name": "Sparks Hansen",
+        "rating": "4.5",
+        "name": "Sparks",
         "about": "Dolore labore deserunt dolore est Lorem mollit consequat. Aliquip do labore id nisi enim voluptate eu cupidatat ad tempor duis tempor ipsum. Esse esse laboris Lorem laborum labore veniam est duis esse aliquip commodo sit."
     },
     {
         "_id": "624c8cc857e3cec634aa1d36",
         "picture": "https://5.imimg.com/data5/CS/LQ/AJ/SELLER-45339558/e13f7128-b3e8-4768-8064-baac09baa889-500x500.JPG",
         "balance": "$3,113.64",
+        "rating": "4",
         "name": "Ester Barnett",
         "about": "Exercitation excepteur incididunt deserunt ad aute commodo. Eu amet cillum enim cupidatat labore velit labore. Magna et nisi nulla ipsum non veniam cillum esse tempor et mollit magna sint labore."
     },
@@ -17,6 +19,7 @@
         "_id": "624c8cc8eab8b9d606504536",
         "picture": "https://5.imimg.com/data5/RL/IF/FA/SELLER-45339558/3f222477-083f-4458-ad55-97ef3469888f-500x500.JPG",
         "balance": "$2,653.20",
+        "rating": "2.5",
         "name": "Lowe Bird",
         "about": "Ut officia anim adipisicing do magna Lorem in in do ullamco labore. Cupidatat eiusmod consequat aliqua culpa minim aliquip deserunt nostrud commodo nulla esse aliqua. Consequat nulla officia veniam pariatur in nisi consequat quis officia sunt ut."
     },
@@ -24,55 +27,63 @@
         "_id": "624c8cc8ab37207d8da58b7b",
         "picture": "https://5.imimg.com/data5/ML/AZ/FX/SELLER-71465869/red-bmw-foldable-cycle-with-21-shimano-gears-500x500.jpg",
         "balance": "$1,695.06",
-        "name": "Burton Douglas",
+        "rating": "3.5",
+        "name": "Douglas",
         "about": "Occaecat consectetur ea eiusmod aute consectetur excepteur sint. Culpa veniam consectetur laboris pariatur nisi nostrud. Aliqua exercitation nulla et aliqua laborum deserunt esse do id nostrud occaecat voluptate Lorem aute. Quis esse sint ea duis."
     },
     {
         "_id": "624c8cc8fae39b07155ae1eb",
         "picture": "https://5.imimg.com/data5/PQ/EX/MB/ANDROID-84375669/product-jpeg-500x500.jpg",
         "balance": "$1,524.96",
-        "name": "Martina Stanton",
+        "rating": "4",
+        "name": "Stanton",
         "about": "Cupidatat anim velit in in amet do irure amet commodo veniam adipisicing ut in. Sit magna dolore aute officia esse mollit est anim mollit laborum mollit. Veniam laboris ad duis irure dolore ad proident ut dolor. "
     },
     {
         "_id": "624c8cc8c880d816ea2c04b4",
         "picture": "https://www.theedgeauto.com/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-25-at-2.32.27-PM.jpeg",
         "balance": "$3,920.89",
-        "name": "Tammi Durham",
+        "rating": "4.5",
+        "name": "Durham",
         "about": "Proident aute ipsum est nisi culpa irure ex ex veniam. Officia minim id nisi quis incididunt. Ullamco minim adipisicing laborum ullamco do sunt elit occaecat nostrud incididunt non veniam adipisicing enim. "
     },
     {
         "_id": "624c8cc89e2408bb48d35abe",
         "picture": "https://d2f9uwgpmber13.cloudfront.net/public/uploads/mobile/4aa66b764e818e3375a730fb90067b58",
         "balance": "$3,853.45",
-        "name": "Vargas Burt",
+        "rating": "3.5",
+        "name": " Burt",
         "about": "Sunt voluptate ullamco est est aliqua cupidatat magna eu. Commodo ea tempor aliquip officia duis velit deserunt ut id sunt. Ad dolore Lorem est labore irure cillum."
     },
     {
         "_id": "624c8cc81fcd64b35d6bfc86",
         "picture": "https://s3.ap-south-1.amazonaws.com/choosemybicycle/images/bicycles/ninety-one-panther-29t-0.jpg",
         "balance": "$3,940.01",
-        "name": "Wilkerson Wright",
+        "rating": "2",
+        "name": "Wright",
         "about": "Cupidatat excepteur ut laborum culpa amet adipisicing elit officia in labore aliqua excepteur cillum labore. Dolor fugiat nostrud amet veniam ut elit culpa excepteur cillum. "
     },
     {
         "_id": "624c8cc8e4205037a462506d",
         "picture": "https://d2f9uwgpmber13.cloudfront.net/public/uploads/mobile/149a6847ec75a3590aedcb0146f3bdec",
         "balance": "$1,073.74",
-        "name": "Harvey Richard",
+        "rating": "3",
+        "name": "Richard",
         "about": "Exercitation sit nulla adipisicing ut minim deserunt nulla aute. Officia ad enim exercitation velit est. Elit mollit est tempor elit laboris ut pariatur eu. Nulla amet cillum pariatur commodo voluptate non magna dolore ut cillum excepteur laboris pariatur."
     },
     {
         "_id": "624c8cc8e56904bf69188538",
         "picture": "https://s3.ap-south-1.amazonaws.com/choosemybicycle/media/913_1.jpg",
         "balance": "$2,702.47",
-        "name": "Jeanie Wiggins",
+        "rating": "1.5",
+        "name": "Wiggins",
         "about": "Ea irure dolor do aute anim in magna do non culpa consequat voluptate. Esse incididunt exercitation eiusmod tempor nostrud aute do duis pariatur pariatur commodo. Consectetur in enim incididunt occaecat in ipsum commodo."
     },
     {
         "_id": "624c8cc8768995b99e324733",
         "picture": "https://cdn.media.halfords.com/i/washford/566122/Apollo-Slant-Mens-Mountain-Bike---14-17-20-Frames.webp?$sfcc_tile_featured$&w=442",
         "balance": "$2,929.90",
+        "rating": ".5",
         "name": "Vonda Rios",
         "about": "Eiusmod officia irure anim Lorem elit pariatur tempor deserunt. Ea exercitation amet ex proident ipsum et ea nostrud minim velit non consectetur. Sunt incididunt Lorem irure do nostrud deserunt incididunt aliqua ea anim sunt. "
     }

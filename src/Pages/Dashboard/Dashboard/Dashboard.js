@@ -75,7 +75,7 @@ function Dashboard(props) {
                     ml: { sm: `${drawerWidth}px` },
                 }}
             >
-                {/* <Toolbar>
+                <Toolbar>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -88,7 +88,7 @@ function Dashboard(props) {
                     <Typography variant="h6" noWrap component="div">
                         Dashboard
                     </Typography>
-                </Toolbar> */}
+                </Toolbar>
             </AppBar>
             <Box
                 component="nav"
@@ -134,7 +134,7 @@ function Dashboard(props) {
                         </Grid>
                         <Grid item xs={12} sm={7}>
                             <Deliveryitem></Deliveryitem>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quia architecto labore voluptates. Asperiores, numquam repellendus aliquid soluta amet laudantium?</p>
+
                         </Grid>
 
                     </Grid>

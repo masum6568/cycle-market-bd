@@ -33,6 +33,7 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         signUsingGoogle(location)
+        console.log(location);
     }
     return (
         <>

@@ -11,6 +11,7 @@ import Services from './Pages/Services/Services/Services';
 import About from './Pages/About/About';
 import Footer from './Pages/Shared/Footer/Footer';
 import PrivateRoute from './Pages/privateRoute/PrivateRoute';
+import SingleServices from './Pages/Services/Services/SingleServices';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/home" element={<Home />}>
           </Route>
           <Route path="/services" element={<Services />}>
+          </Route>
+          <Route path="/details/:_id" element={<SingleServices />}>
           </Route>
           <Route path="/about" element={<PrivateRoute>
             <About />
