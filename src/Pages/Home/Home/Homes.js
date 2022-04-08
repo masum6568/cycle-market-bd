@@ -6,7 +6,7 @@ import './Homes.css'
 const Homes = () => {
     const [temple, setTemple] = useState([])
     useEffect(() => {
-        fetch('http://localhost:8000/products')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setTemple(data.slice(0, 6)))
     }, [])
@@ -14,7 +14,7 @@ const Homes = () => {
         <>
             <Container>
 
-                <Box sx={{ flexGrow: 1 }}>
+                <Box sx={{ flexGrow: 1, mb: 8 }} >
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {
                             temple.map(article => <Grid item xs={2} sm={4} md={4}>
@@ -25,9 +25,7 @@ const Homes = () => {
                     </Grid>
                 </Box>
             </Container>
-            <div className="btn" >
-                <Link to="/services"> <Button>More Service</Button></Link>
-            </div>
+
         </>
     );
 };

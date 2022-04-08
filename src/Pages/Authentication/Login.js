@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
 import { Grid } from '@mui/material';
-import { NavLink, useLocation } from 'react-router-dom';
-
-import useFireBase from '../../hooks/useFirebase';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import Footer from '../Shared/Footer/Footer';
+import useAuth from '../../hooks/UseAuth';
 
 
 
@@ -13,7 +12,7 @@ import Footer from '../Shared/Footer/Footer';
 
 
 const Login = () => {
-    const { signUsingGoogle, loginUser, user, isLoading, authError } = useFireBase()
+    const { signUsingGoogle, loginUser, user, isLoading, authError } = useAuth()
     const [loginData, setLoginData] = useState({});
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -22,17 +21,17 @@ const Login = () => {
         newLoginData[field] = value;
         setLoginData(newLoginData);
     }
-    const location = useLocation();
-    // const history = useNavigate();
+    let location = useLocation();
+    let navigate = useNavigate();
 
     const handleLoginSubmit = e => {
         console.log(loginData);
-        loginUser(loginData.email, loginData.password, location)
+        loginUser(loginData.email, loginData.password, location, navigate)
         e.preventDefault();
     }
 
     const handleGoogleLogin = () => {
-        signUsingGoogle(location)
+        signUsingGoogle(location, navigate)
         console.log(location);
     }
     return (

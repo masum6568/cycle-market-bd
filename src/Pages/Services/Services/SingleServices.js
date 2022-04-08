@@ -8,7 +8,7 @@ const SingleServices = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:8000/products/${_id}`)
+        fetch(`http://localhost:5000/products/${_id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

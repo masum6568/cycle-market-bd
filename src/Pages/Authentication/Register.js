@@ -11,15 +11,16 @@ import Navigation from '../Shared/Navigation/Navigation';
 import './Register.css'
 import { deepOrange } from '@mui/material/colors';
 import Footer from '../Shared/Footer/Footer';
+import useAuth from '../../hooks/UseAuth';
 
 
 
 
 const Register = () => {
-    const { user, registerUser, isLoading, authError } = useFireBase();
+    const { user, registerUser, isLoading, authError } = useAuth();
     const [regData, setRegData] = useState({});
 
-    const history = useNavigate();
+    let navigate = useNavigate();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -34,7 +35,7 @@ const Register = () => {
             alert('Your password did not match');
             return
         }
-        registerUser(regData.email, regData.password, regData.name, history);
+        registerUser(regData.email, regData.password, regData.name, navigate);
         console.log(regData.name);
 
         e.preventDefault();

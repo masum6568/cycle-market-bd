@@ -1,0 +1,68 @@
+h1 {
+    font-family: 'Montserrat', sans-serif
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.blue-bg {
+    position: fixed;
+    background: url(https://cloudfront-us-east-1.images.arcpublishing.com/octane/AK5EUOKW7CENY3PM37E4Y2ZROY.jpg);
+    background-size: cover;
+    background-color: #58aff6;
+    top: 0;
+    height: 400px;
+
+    width: 100vw;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+.white-bg {
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    min-height: 500px;
+    margin: 210px 0px;
+    width: 100vw;
+    height: 100vh;
+    transform: skewY(5deg);
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    margin: 250px 10vw;
+    max-width: 60vw;
+    background-color: transparent;
+}
+
+.shadow {
+    box-shadow: -2px -5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+$font-family:  'Raleway', sans-serif;
+$font-size-light: 400;
+$font-size-bold: 700;
+
+body{
+  overflow-x: hidden;
+  background: #fff;
+  height: 1000px;
+  font-family: $font-family;
+};
+
+<Video className="video" videoUrl = {this.state.videoUrl} type =   {this.state.type}/>
+class App extends React.Component {
+    constructor(props){
+      super(props);
+      this.state ={
+        videoUrl: "http://thenewcode.com/assets/videos/fashion.mp4",
+        type: "video/mp4"
+      }
+    } */

@@ -69,6 +69,7 @@ const ServicesCard = (props) => {
                     <Button variant="contained">Buy Now</Button>
                 </Link>
             </Stack>
+
         </Card>
     )
 

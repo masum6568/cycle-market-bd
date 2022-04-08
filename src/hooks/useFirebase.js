@@ -17,14 +17,15 @@ const useFireBase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
+
     // This is for sign in with Google
-    const signUsingGoogle = (location, history) => {
+    const signUsingGoogle = (location, navigate) => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const destination = location?.state?.from || '/';
                 navigate(destination)
-                setAuthError('');
+                // setAuthError('');
                 const user = result.user
                 setUser(user);
             }).catch((error) => {
@@ -35,20 +36,22 @@ const useFireBase = () => {
 
     // Email Pass log In and Reg
 
-    const registerUser = (email, password, name) => {
+    const registerUser = (email, password, name, navigate) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                const newUser = { email, displayName: name }
-                setUser(newUser);
+                // const newUser = { email, displayName: name }
+                // setUser(newUser);
+
                 //send name to firebase after creation
-                updateProfile(auth.currentUser, {
-                    displayName: name
-                }).then(() => {
-                }).catch((error) => {
-                });
-                setAuthError('');
+
+                // updateProfile(auth.currentUser, {
+                //     displayName: name
+                // }).then(() => {
+                // }).catch((error) => {
+                // });
                 navigate('/')
+                setAuthError('');
             })
             .catch((error) => {
                 setAuthError(error.message);
@@ -56,7 +59,7 @@ const useFireBase = () => {
             .finally(() => setIsLoading(false));
     };
 
-    const loginUser = (email, password, location,) => {
+    const loginUser = (email, password, location, navigate) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -70,6 +73,8 @@ const useFireBase = () => {
             })
             .finally(() => setIsLoading(false));
     }
+
+    const admin = true;
 
     // this is using for Log Out
     const logout = () => {
@@ -99,6 +104,7 @@ const useFireBase = () => {
         user,
         signUsingGoogle,
         registerUser,
+        admin,
         logout,
         loginUser,
         isLoading,

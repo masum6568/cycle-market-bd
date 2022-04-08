@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 
 import './Procured.css'
 const Procured = () => {
+
+
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
 
-        axios.post("http://localhost:8000/information", data)
+        axios.post("http://localhost:5000/information", data)
             .then(res => {
 
                 if (res.data.insertedId) {
@@ -27,11 +29,11 @@ const Procured = () => {
         <div className='buy-now'>
             <h2>Add Your Information</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                <input {...register("city")} placeholder="City" />
-                <input type="number" {...register("phone")} placeholder="Phone" />
-                <input {...register("email")} placeholder="Email" />
-                <textarea {...register("massage")} placeholder="Message" />
+                <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name"></input>
+                <input {...register("picture")} placeholder="picture" />
+                <input type="number" {...register("balance")} placeholder="balance" />
+                <input type="number" {...register("rating")} placeholder="rating" />
+                <textarea {...register("about")} placeholder="about" />
                 <input type="submit" />
             </form>
         </div>

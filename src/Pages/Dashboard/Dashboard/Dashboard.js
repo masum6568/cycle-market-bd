@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,69 +15,113 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Button, Grid } from '@mui/material';
-import { NavLink } from 'react-router-dom';
-import Deliveryitem from '../Deliveryitem';
+import { Outlet, useNavigate } from 'react-router-dom';
+import useAuth from '../../../hooks/UseAuth';
+;
 
-const drawerWidth = 200;
-
-function Dashboard(props) {
+const drawerWidth = 240;
+function DashBoard(props) {
+    const { user, admin } = useAuth()
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-
+    let navigate = useNavigate()
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
+    const handleRoute = (text) => {
+
+        if (admin === true) {
+
+            switch (text) {
+                case "Home": navigate('/home')
+                    break;
+                case "Dashboard": navigate('/dashboard')
+                    break;
+                case "Add Service": navigate('/dashboard/addServices')
+                    break;
+                case "Manage Services": navigate('/dashboard/manageServices')
+                    break;
+                case "Give Review": navigate('/dashboard/giveReview')
+                    break;
+                // case "My Plans": navigate('/dashboard/myPlans')
+                //     break;
+
+
+
+                default: navigate('/dashboard')
+            }
+        }
+        else {
+
+            switch (text) {
+                case "Home": navigate('/home')
+                    break;
+                case "Give Review": navigate('/dashboard/giveReview')
+                    break;
+                // case "My Plans": navigate('/dashboard/myPlans')
+                //     break;
+                case "Dashboard": navigate('/dashboard')
+                    break;
+                default: navigate('/dashboard')
+            }
+
+        }
+
+    }
+
     const drawer = (
-        <div >
-            <Toolbar />
+        <div>
+            <Toolbar>
+                <Typography
+                    variant="h6"
+                    noWrap
+                    component="div"
+                    sx={{ mx: "auto", padding: "10px", fontSize: "1.5rem", display: { md: 'flex' } }}
+
+                >
+                    <img width={100} style={{ borderRadius: "50%", width: "75%" }} src={user.photoURL} alt="Logo" />
+                </Typography></Toolbar>
             <Divider />
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
+                {
+                    admin ? ['Home', 'DashBoard', "Add Service", "Manage Services", 'Give Review'].map((text, index) => (
+                        <ListItem button key={text}>
+                            <ListItemIcon>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} onClick={() => handleRoute(text)} />
+                        </ListItem>
+                    ))
+                        :
+                        ['Home', 'DashBoard', 'Give Review', 'My Plans'].map((text, index) => (
+                            <ListItem button key={text}>
+                                <ListItemIcon>
+                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                </ListItemIcon>
+                                <ListItemText primary={text} onClick={() => handleRoute(text)} />
+                            </ListItem>
+                        ))
+                }
             </List>
-            {/* aie dik er dak ta */}
-            {/* <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List> */}
-            <NavLink style={{
-                textDecoration: 'none',
-                // color: 'white'
-            }}
-                to="/home" ><Button variant="contained" color="success"  >Back to Home</Button></NavLink>
-
         </div>
     );
+
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar
-                position="fixed"
+                position="fixed" style={{ backgroundColor: "white" }}
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
                 }}
             >
-                <Toolbar>
+                <Toolbar >
                     <IconButton
-                        color="inherit"
+                        color="secondary"
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
@@ -85,8 +129,10 @@ function Dashboard(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                        Dashboard
+                    <Typography variant="h6" noWrap component="div" sx={{ mx: "auto", color: "black", fontWeight: "700" }} >
+
+                        {/* <img width={40} style={{ margin: "5px" }} src="https://cdn5.vectorstock.com/i/thumb-large/36/64/user-account-box-glyph-icon-vector-28873664.jpg" alt="" /> */}
+                        Welcome To Your Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -114,8 +160,8 @@ function Dashboard(props) {
                 <Drawer
                     variant="permanent"
                     sx={{
-                        display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        display: { xs: 'none', color: "green", sm: 'block' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, height: "500px" },
                     }}
                     open
                 >
@@ -125,29 +171,16 @@ function Dashboard(props) {
             <Box
                 component="main"
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+
             >
                 <Toolbar />
-                <Typography paragraph>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} sm={5}>
-                            <img style={{ width: '50%' }} src="https://images.unsplash.com/photo-1553105659-d918b253f0f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmljeWNsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
-                        </Grid>
-                        <Grid item xs={12} sm={7}>
-                            <Deliveryitem></Deliveryitem>
-
-                        </Grid>
-
-                    </Grid>
-                </Typography>
-
-
-
+                <Outlet></Outlet>
             </Box>
         </Box>
     );
 }
 
-Dashboard.propTypes = {
+DashBoard.propTypes = {
     /**
      * Injected by the documentation to work in an iframe.
      * You won't need it on your project.
@@ -155,4 +188,4 @@ Dashboard.propTypes = {
     window: PropTypes.func,
 };
 
-export default Dashboard;
+export default DashBoard;

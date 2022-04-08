@@ -13,17 +13,18 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import useFireBase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/UseAuth';
+
 
 // import useAuth from '../../../hooks/useAuth';
 
-const pages = ['Home', 'Packages', 'About'];
+const pages = ['Home', 'Services', 'Contact', 'About', 'Dashboard'];
 
 
 
 const Navigation = () => {
     // const { user, logout } = useAuth()
-    const { user, logout } = useFireBase()
+    const { user, logout } = useAuth()
     let navigate = useNavigate();
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,11 +44,13 @@ const Navigation = () => {
 
             case "Home": navigate('/home')
                 break;
-            case "Packages": navigate('/services')
+            case "Services": navigate('/services')
                 break;
             case "About": navigate('/about')
                 break;
-            case "DashBoard": navigate('/about')
+            case "Contact": navigate('/contact')
+                break;
+            case "DashBoard": navigate('/dashboard')
                 break;
             default: navigate('/home')
         }
