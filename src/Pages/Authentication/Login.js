@@ -6,11 +6,6 @@ import './Login.css'
 import Footer from '../Shared/Footer/Footer';
 import useAuth from '../../hooks/UseAuth';
 
-
-
-
-
-
 const Login = () => {
     const { signUsingGoogle, loginUser, user, isLoading, authError } = useAuth()
     const [loginData, setLoginData] = useState({});

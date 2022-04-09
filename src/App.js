@@ -21,6 +21,7 @@ import GiveReview from './Pages/DashBoard/GiveReview/GiveReview';
 import AddService from './Pages/Services/Services/AddService';
 import LoadAddService from './Pages/Services/Services/LoadAddService';
 import ManageServices from './Pages/DashBoard/ManageServices/ManageServices';
+import BookingService from './Pages/Services/Services/BookingService';
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />}>
             </Route>
-            <Route path="/services" element={<Services />}>
+            <Route path="/services" element={<PrivateRoute><Services /></PrivateRoute>}>
             </Route>
             <Route path="/details/:_id" element={<SingleServices />}>
             </Route>
@@ -58,6 +59,8 @@ function App() {
               </Route>
             </Route>
             <Route path="/login" element={<Login />}>
+            </Route>
+            <Route path="/order" element={<BookingService />}>
             </Route>
             <Route path="/register" element={<Register />}>
             </Route>

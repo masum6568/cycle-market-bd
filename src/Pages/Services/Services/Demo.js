@@ -4,7 +4,7 @@ import './Demo.css'
 const Demo = () => {
     return (
         <div>
-            <h2>Demo Cycle</h2>
+
 
             <div className='body'>
                 <div className="container">

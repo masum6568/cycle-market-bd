@@ -18,7 +18,7 @@ import useAuth from '../../../hooks/UseAuth';
 
 // import useAuth from '../../../hooks/useAuth';
 
-const pages = ['Home', 'Services', 'Contact', 'About', 'Dashboard'];
+const pages = ['Home', 'Services', 'About'];
 
 
 
@@ -50,8 +50,8 @@ const Navigation = () => {
                 break;
             case "Contact": navigate('/contact')
                 break;
-            case "DashBoard": navigate('/dashboard')
-                break;
+            // case "DashBoard": navigate('/dashboard')
+            //     break;
             default: navigate('/home')
         }
 
@@ -117,7 +117,7 @@ const Navigation = () => {
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                         >
-                            {/* <img width={100} style={{ padding: '5px' }} src="http://ingenioushubs.com/Travel/demo/images/header-logo.png" alt="Logo" /> */}
+
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
@@ -144,7 +144,7 @@ const Navigation = () => {
                                     }}
                                 >
                                     <Box sx={{ display: { xs: 'none', md: 'flex' }, marginLeft: '100px' }}  >{user.displayName}</Box>
-                                    <img src={user.photoURL} style={{ borderRadius: "80%", width: "15%" }} alt="" />
+                                    <img src={user.photoURL} style={{ borderRadius: "80%", width: "12%" }} alt="" />
 
                                     <NavLink style={{
                                         textDecoration: 'none',

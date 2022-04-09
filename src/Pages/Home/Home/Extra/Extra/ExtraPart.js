@@ -1,7 +1,7 @@
 import { Button, Container, Grid, Rating, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const ExtraPart = () => {
     return (

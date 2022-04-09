@@ -59,8 +59,8 @@ function DashBoard(props) {
                     break;
                 case "Give Review": navigate('/dashboard/giveReview')
                     break;
-                // case "My Plans": navigate('/dashboard/myPlans')
-                //     break;
+                case "My Plans": navigate('/dashboard/myPlans')
+                    break;
                 case "Dashboard": navigate('/dashboard')
                     break;
                 default: navigate('/dashboard')
@@ -85,7 +85,7 @@ function DashBoard(props) {
             <Divider />
             <List>
                 {
-                    admin ? ['Home', 'DashBoard', "Add Service", "Manage Services", 'Give Review'].map((text, index) => (
+                    admin ? ['Home', "Add Service", "Manage Services", 'Give Review'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
                                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -130,8 +130,6 @@ function DashBoard(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div" sx={{ mx: "auto", color: "black", fontWeight: "700" }} >
-
-                        {/* <img width={40} style={{ margin: "5px" }} src="https://cdn5.vectorstock.com/i/thumb-large/36/64/user-account-box-glyph-icon-vector-28873664.jpg" alt="" /> */}
                         Welcome To Your Dashboard
                     </Typography>
                 </Toolbar>
@@ -141,7 +139,7 @@ function DashBoard(props) {
                 sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
                 aria-label="mailbox folders"
             >
-                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+
                 <Drawer
                     container={container}
                     variant="temporary"

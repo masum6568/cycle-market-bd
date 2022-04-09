@@ -7,6 +7,7 @@ import Homes from './Homes';
 import ExtraPart from './Extra/Extra/ExtraPart';
 import LoadAddService from '../../Services/Services/LoadAddService';
 
+
 const Home = () => {
     return (
         <>
@@ -15,6 +16,7 @@ const Home = () => {
             <Homes></Homes>
             <ExtraPart></ExtraPart>
             <LoadAddService></LoadAddService>
+
             <Footer />
         </>
     );

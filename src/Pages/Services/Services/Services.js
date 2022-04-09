@@ -2,6 +2,7 @@ import { Container, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../Shared/Footer/Footer';
+import BookingService from './BookingService';
 import ServicesCard from './ServicesCard';
 
 
@@ -13,7 +14,9 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setCycle(data))
     }, [])
+
     return (
+
         <>
             <Container>
                 <Box sx={{ flexGrow: 1 }} style={{ marginTop: '20px', paddingBottom: '50px' }}>
@@ -22,14 +25,18 @@ const Services = () => {
                             cycle.map(article => <Grid item xs={2} sm={4} md={4}>
                                 <ServicesCard article={article}></ServicesCard>
 
-
                             </Grid>)
                         }
+
                     </Grid>
                 </Box>
             </Container>
             <Footer></Footer>
+
         </>
+
+
+
     );
 };
 
