@@ -108,13 +108,13 @@ const About = () => {
                 <Grid container spacing={2} style={{ marginBottom: '220px', marginTop: '200px' }}>
                     <Grid item xs={12} sm={6} >
                         <img src="https://media.istockphoto.com/photos/portrait-of-handsome-smiling-young-man-with-crossed-arms-picture-id1200677760?k=20&m=1200677760&s=612x612&w=0&h=JCqytPoHb6bQqU9bq6gsWT2EX1G5chlW5aNK81Kh4Lg=" style={{ width: '60%' }} alt="" />
-                        <Typography>This is about</Typography>
+
                     </Grid>
 
 
                     <Grid item xs={12} sm={5}>
                         <img src="https://deathofhemingway.com/wp-content/uploads/2020/12/istockphoto-1045886560-612x612-1.jpg" alt="" style={{ width: '90%', marginRight: '400px', marginTop: '150px' }} />
-                        <Typography>This is about</Typography>
+
                     </Grid>
 
                 </Grid>
