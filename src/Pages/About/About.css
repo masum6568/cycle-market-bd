@@ -43,26 +43,3 @@ p {
 .shadow {
     box-shadow: -2px -5px 5px 0px rgba(0, 0, 0, 0.3);
 }
-
-
-/* @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-$font-family:  'Raleway', sans-serif;
-$font-size-light: 400;
-$font-size-bold: 700;
-
-body{
-  overflow-x: hidden;
-  background: #fff;
-  height: 1000px;
-  font-family: $font-family;
-};
-
-<Video className="video" videoUrl = {this.state.videoUrl} type =   {this.state.type}/>
-class App extends React.Component {
-    constructor(props){
-      super(props);
-      this.state ={
-        videoUrl: "http://thenewcode.com/assets/videos/fashion.mp4",
-        type: "video/mp4"
-      }
-    } */
