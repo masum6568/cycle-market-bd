@@ -6,7 +6,7 @@ import './Homes.css'
 const Homes = () => {
     const [temple, setTemple] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://dry-bayou-95627.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setTemple(data.slice(0, 6)))
     }, [])

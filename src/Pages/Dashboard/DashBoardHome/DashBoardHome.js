@@ -16,13 +16,13 @@ const DashBoardHome = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://dry-bayou-95627.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setProducts(data))
     })
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `https://dry-bayou-95627.herokuapp.com/order/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

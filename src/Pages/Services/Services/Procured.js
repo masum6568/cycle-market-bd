@@ -10,7 +10,7 @@ const Procured = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post("http://localhost:5000/information", data)
+        axios.post("https://dry-bayou-95627.herokuapp.com/information", data)
             .then(res => {
 
                 if (res.data.insertedId) {

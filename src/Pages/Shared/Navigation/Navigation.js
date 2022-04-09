@@ -72,7 +72,7 @@ const Navigation = () => {
                             sx={{ mr: 2, fontSize: "1.5rem", display: { xs: 'none', md: 'flex' } }}
 
                         >
-                            <img width={100} src="http://demo2.themelexus.com/ridez/wp-content/uploads/2021/12/logo-1.svg" alt="Logo" />
+                            <img width={100} src="https://cdn.dribbble.com/users/383120/screenshots/4934356/media/a84f7cfdca47d056cc8a0fe05d21975a.png?compress=1&resize=400x300" alt="" />
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

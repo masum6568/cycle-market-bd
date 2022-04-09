@@ -14,13 +14,13 @@ import { IconButton, Rating, Stack } from '@mui/material';
 const ManageServices = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/information')
+        fetch('https://dry-bayou-95627.herokuapp.com/information')
             .then(res => res.json())
             .then(data => setProducts(data))
     })
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/information/${id}`;
+        const url = `https://dry-bayou-95627.herokuapp.com/information/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

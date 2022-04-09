@@ -37,7 +37,7 @@ const BookingService = ({ service }) => {
     const handleBookingSubmit = (e) => {
         const bookingInfo = { ...bookingInformation, packageName: service.name, packageImg: service.picture, price: service.balance, status: "pending" }
         console.log(bookingInfo);
-        fetch('http://localhost:5000/order', {
+        fetch('https://dry-bayou-95627.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

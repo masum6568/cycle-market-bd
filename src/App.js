@@ -38,11 +38,11 @@ function App() {
             </Route>
             <Route path="/services" element={<PrivateRoute><Services /></PrivateRoute>}>
             </Route>
-            <Route path="/details/:_id" element={<SingleServices />}>
+            <Route path="/details/:_id" element={<PrivateRoute><SingleServices /></PrivateRoute>}>
             </Route>
-            <Route path="/about" element={<PrivateRoute>
+            <Route path="/about" element={
               <About />
-            </PrivateRoute>}>
+            }>
             </Route>
             <Route path="/dashboard" element={<PrivateRoute>
               <DashBoard />
