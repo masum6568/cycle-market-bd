@@ -22,7 +22,7 @@ const DashBoardHome = () => {
     })
 
     const handleDelete = id => {
-        const url = `https://lit-caverns-20939.herokuapp.com/${id}`;
+        const url = `https://lit-caverns-20939.herokuapp.com/order/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
