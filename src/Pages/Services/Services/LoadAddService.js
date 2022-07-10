@@ -8,7 +8,7 @@ const LoadAddService = () => {
 
     const [cycle, setCycle] = useState([]);
     useEffect(() => {
-        fetch('https://dry-bayou-95627.herokuapp.com/information')
+        fetch('https://lit-caverns-20939.herokuapp.com/information')
             .then(res => res.json())
             .then(data => setCycle(data))
     }, [])

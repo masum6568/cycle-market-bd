@@ -56,7 +56,7 @@ const Register = () => {
                             alignItems: 'center',
                         }}>
                             <Avatar src="/broken-image.jpg" />
-                        </Typography>
+              </Typography>
 
                         {!isLoading && <form onSubmit={handleLoginSubmit}>
                             <TextField

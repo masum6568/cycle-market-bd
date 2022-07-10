@@ -10,7 +10,7 @@ const Services = () => {
 
     const [cycle, setCycle] = useState([]);
     useEffect(() => {
-        fetch('https://dry-bayou-95627.herokuapp.com/products')
+        fetch('https://lit-caverns-20939.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setCycle(data))
     }, [])

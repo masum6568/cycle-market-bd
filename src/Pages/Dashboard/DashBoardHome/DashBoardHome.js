@@ -16,13 +16,13 @@ const DashBoardHome = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://dry-bayou-95627.herokuapp.com/order')
+        fetch('https://lit-caverns-20939.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setProducts(data))
     })
 
     const handleDelete = id => {
-        const url = `https://dry-bayou-95627.herokuapp.com/order/${id}`;
+        const url = `https://lit-caverns-20939.herokuapp.com/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

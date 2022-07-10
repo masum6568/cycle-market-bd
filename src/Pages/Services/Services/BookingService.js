@@ -39,21 +39,24 @@ const BookingService = ({ service }) => {
     const handleBookingSubmit = (e) => {
         const bookingInfo = { ...bookingInformation, packageName: service.name, packageImg: service.picture, price: service.balance, status: "pending" }
         console.log(bookingInfo);
-        fetch('https://dry-bayou-95627.herokuapp.com/order', {
+        fetch('https://lit-caverns-20939.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(bookingInfo)
+            
         })
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
                     setBookingSuccess(true);
+                
                 }
             });
         console.log();
         e.preventDefault();
+     
     }
 
 

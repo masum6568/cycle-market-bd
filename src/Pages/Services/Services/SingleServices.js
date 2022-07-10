@@ -11,7 +11,7 @@ const SingleServices = () => {
 
     useEffect(() => {
         const hello = async () => {
-            await fetch(`https://dry-bayou-95627.herokuapp.com/products/${_id}`)
+            await fetch(`https://lit-caverns-20939.herokuapp.com/products/${_id}`)
                 .then(res => res.json())
                 .then(data => setService(data))
         }

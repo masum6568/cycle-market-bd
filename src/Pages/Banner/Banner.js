@@ -16,30 +16,7 @@ import SendIcon from '@mui/icons-material/Send';
 import './Banner.css'
 
 const Banner = () => {
-    // const [values, setValues] = React.useState({
-    //     amount: '',
-    //     password: '',
-    //     weight: '',
-    //     weightRange: '',
-    //     showPassword: false,
-    // });
-
-    // const handleChange = (prop) => (event) => {
-    //     setValues({ ...values, [prop]: event.target.value });
-    // };
-
-    // const handleClickShowPassword = () => {
-    //     setValues({
-    //         ...values,
-    //         showPassword: !values.showPassword,
-    //     });
-    // };
-
-    // const handleMouseDownPassword = (event) => {
-    //     event.preventDefault();
-    // };
-
-
+  
     return (
         <Box className="this" style={{ marginTop: '16px' }} >
             <Grid container spacing={2}>

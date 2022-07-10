@@ -58,6 +58,8 @@ function App() {
               <Route path={"/dashboard/manageServices"} element={<PrivateRoute><ManageServices /></PrivateRoute>}>
               </Route>
             </Route>
+
+
             <Route path="/login" element={<Login />}>
             </Route>
             <Route path="/order" element={<BookingService />}>
